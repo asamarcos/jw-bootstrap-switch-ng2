@@ -14,13 +14,14 @@ Angular Component for Bootstrap Switch. Useful to make a checkbox more entertain
 ## Support
 | NPM Version | Angular |
 |-----------|:-----------|
+| ^16.0.0 | Angular 16+|
 | ^2.0.0 | Angular 6+|
 | 1.0.10 | Angular 5 |
 | 1.0.0  | Angular 2-4 |
 
 ## Installation
 ```
-  npm install jw-bootstrap-switch-ng2 --save
+  npm install @servoy/jw-bootstrap-switch-ng2 --save
 ```
 
 ## Breaking Changes
