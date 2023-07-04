@@ -39,7 +39,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -82,18 +81,6 @@
               "src/assets"
             ]
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -112,15 +99,6 @@
               "devServerTarget": "ngx-bootstrap-switch-demo:serve:production"
             }
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -131,13 +109,14 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/jw-bootstrap-switch-ng2/tsconfig.lib.json",
             "project": "projects/jw-bootstrap-switch-ng2/ng-package.json"
           },
           "configurations": {
             "production": {
+              "tsConfig": "projects/jw-bootstrap-switch-ng2/tsconfig.lib.prod.json",
               "project": "projects/jw-bootstrap-switch-ng2/ng-package.prod.json"
             }
           }
@@ -149,21 +128,11 @@
             "tsConfig": "projects/jw-bootstrap-switch-ng2/tsconfig.spec.json",
             "karmaConfig": "projects/jw-bootstrap-switch-ng2/karma.conf.js"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/jw-bootstrap-switch-ng2/tsconfig.lib.json",
-              "projects/jw-bootstrap-switch-ng2/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     }
   },
-  "defaultProject": "ngx-bootstrap-switch-demo"
+  "cli": {
+    "analytics": "c16479b5-7a42-46bb-b8dd-07b1949317fb"
+  }
 }

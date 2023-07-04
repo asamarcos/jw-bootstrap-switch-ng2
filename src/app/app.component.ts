@@ -1,5 +1,5 @@
 import {Component, ChangeDetectionStrategy} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {UntypedFormBuilder, UntypedFormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -28,11 +28,11 @@ export class AppComponent {
   public labelWidth: string = 'auto';
   public offColorValue: boolean = false;
   public offTextValue: boolean = false;
-  public form: FormGroup;
+  public form: UntypedFormGroup;
   public model: any = {};
   public wrapperClass: string = 'bootstrap-switch';
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: UntypedFormBuilder) {
     this.form = this.fb.group({
       view: [null, Validators.required]
     });

@@ -8,7 +8,7 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
+    "target": "ES2022",
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -23,6 +23,7 @@
       "jw-bootstrap-switch-ng2/*": [
         "dist/jw-bootstrap-switch-ng2/*"
       ]
-    }
+    },
+    "useDefineForClassFields": false
   }
 }
