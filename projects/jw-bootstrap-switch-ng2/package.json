@@ -11,6 +11,7 @@
     "angular14",
     "angular15",
     "angular16",
+    "angular17",
     "bootstrap",
     "switch",
     "directive",
@@ -25,9 +26,9 @@
     "url": "https://github.com/Servoy/jw-bootstrap-switch-ng2/issues"
   },
   "peerDependencies": {
-    "@angular/common": "^16",
-    "@angular/core": "^16",
-    "@angular/forms": "^16"
+    "@angular/common": "^17",
+    "@angular/core": "^17",
+    "@angular/forms": "^17"
   },
   "license": "MIT"
 }
